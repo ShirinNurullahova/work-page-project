@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modals.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Section1 -->
+    <main class="container">
+      <aside class="left-aside">
+        <div class="left-aside-up">
+          <p>Login <i id="loginModalImg" style="color: green;" class="fas fa-sign-in-alt"></i></p>
+          <p>Employees <i style="color: green;" class="fas fa-people-carry"></i></p>
+          <p>Tasks <i style="color: green;" class="far fa-building"></i></p>
+          <p>About us <i style="color: green;" class="fas fa-address-card"></i></p>
+        </div>
+        <main id='job-main'>
+            <h2>Jobs to be done</h2>
+            <div id="div-container" ></div>
+        </main>
+        <div class="left-aside-down">
+          <p>Help and Support <i style="color: green;" class="fas fa-home"></i></p>
+          <p>Setting <i style="color: green;" class="fas fa-cog"></i></p>
+          <p>Log out <i style="color: green;"  class="fas fa-sign-out-alt"></i></p>
+        </div>
+      </aside>
+      <section>
+          <input class="search-box" type="text" placeholder="Search work" />
+          <i style="cursor: pointer" id="edit-img" class="fas fa-edit"></i>
+        
+         <div class="accordion-box">
+            <div id="box-container" class="box-contain">
+            </div>
+       </div>
+      </section>
+      <aside id="right-aside" class="right-aside">
+         
+      </aside>
+      <!-- Add Modal -->
+      <div class="add-modal-box" id="add-work-box">
+        <form id="add-modal">
+          <input type="text" id="task-name" placeholder="task name" />
+          <input
+            type="text"
+            id="description"
+            placeholder="task description"
+          />
+          <img src="./assets/cancel.svg" class="close-img"
+          id="add-work-cancel"/>
+          <div class="add-modal-radio">
+             
+              <div>
+                <label for="Name">Name</label>
+                <input type="text" id="name" name="text"  />
+              </div>
+            <p>Gender :</p>
+            <div>
+              <label for="Female">Female</label>
+              <input type="radio" id="Female" name="Gender" checked />
+
+              <label for="Male">Male</label>
+              <input type="radio" id="Male" name="Gender" />
+            </div>
+            <label for="start">Deadline:</label>
+
+            <input
+            class="dead"
+              type="date"
+              id="deadline"
+              name="deadline"
+              value="2021-12-25"
+              min="2021-10-26"
+              max="2021-1-4"
+              
+            />
+            
+            <input id="percent" value="" type="text" placeholder="progress percent">
+            
+            <p>Current Date : <span></span> </p>
+            <p id="timing-f"  >Timing function : <span></span></p>
+          </form>
+         
+          </div>
+          <button id="add-work-submit">Submit</button>
+           <p  id="compare-date"  style="opacity: 0;">Deadline is end</p>
+      </div>
+       <!-- login modal -->
+    <div class="login-modal" id="login-modal">
+      <img
+        src="./assets/cancel.svg"
+        alt="cancel"
+        class="close-img"
+        id="login-modal-close"
+      />
+      <form id="login-form">
+        <input type="text" id="login-mail" required placeholder="enter mail" />
+        <input
+          type="password"
+          required
+          id="login-password"
+          placeholder="enter password"
+        />
+        <button id="login-submit">LOGIN</button>
+      </form>
+    </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

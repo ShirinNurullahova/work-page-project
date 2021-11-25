@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yantramanav";
+}
+:root {
+  --margin: 30px 10px 10px 10px;
+}
+@font-face {
+  font-family: "Yantramanav";
+  src: url("./assets/fonts/Yantramanav-Bold.ttf");
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("./assets/icons/icomoon.eot");
+  src: url("./assets/icons/icomoon.eot?#iefix") format("embedded-opentype"),
+    url("./assets/icons/icomoon.woff") format("woff"),
+    url("./assets/icons/icomoon.ttf") format("truetype"),
+    url("./assets/icons/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "icomoon";
+  content: attr(data-icon);
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eceff3;
+  height: 100vh;
+}
+.container {
+  background-color: #fcfdff;
+  width: 80%;
+  height: 90%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.103);
+  display: flex;
+  justify-content: center;
+}
+section {
+  width: 60%;
+  background-image: url("./assets/image/pexels-marc-mueller-380769.jpg");
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.103);
+}
+.search-box {
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(186, 179, 255, 0.103);
+  border: 1px solid rgb(187, 187, 255, 0.4);
+  width: 90%;
+  padding: 15px;
+  margin: var(--margin);
+}
+
+aside {
+  width: 20%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(186, 179, 255, 0.103);
+  border: 1px solid rgba(191, 241, 111, 0.85);
+  background-color: rgba(191, 241, 111, 0.85);
+}
+.left-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-aside-down {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.left-aside-up {
+  background-color: #fff;
+  width: 90%;
+  border-radius: 8px;
+}
+.left-aside-down p {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: rgba(233, 238, 222, 0.85);
+}
+
+.left-aside-up p {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: rgba(233, 238, 222, 0.85);
+}
+.left-aside-middle {
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(186, 179, 255, 0.103);
+  border: 1px solid rgba(191, 241, 111, 0.85);
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+#loginModalImg {
+  cursor: pointer;
+}
+
+.task {
+  background-color: rgba(191, 241, 111, 0.85);
+  /* width: 500px; */
+  position: relative;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  padding: 20px 20px 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  /* display: none; */
+}
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  transition: all 2s;
+}
+.task-description {
+  /* display: none; */
+  transition: all 6s;
+}
+.task-info p {
+  margin-bottom: 10px;
+}
+.plus-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.rotate-img {
+  transform: rotate(45deg);
+}
+main {
+  margin-top: 1em;
+  background-color: rgba(50, 65, 27, 0.85);
+  border-radius: 8px;
+}
+
+#div-container {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid white;
+}
+#right-aside > div {
+  margin-top: 1em;
+  background-color: rgba(50, 65, 27, 0.85);
+  border-radius: 8px;
+}
+#box-container {
+  width: 95%;
+  /* text-align: center; */
+  margin: 0 auto;
+}
+.accordion-box .box-contain .task .task-description {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  /* overflow-y: hidden; */
+  /* display: none; */
+}
+.active {
+  height: 150px;
+  padding: 20px 5px 150px 5px;
+}
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 300px;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: 1s ease 0.3s;
+}

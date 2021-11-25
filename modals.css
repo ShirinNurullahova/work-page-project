@@ -1,0 +1,53 @@
+.add-modal-box,
+.login-modal {
+  width: 500px;
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 30px 30px 30px;
+  border-radius: 10px;
+  background-color: rgba(191, 241, 111, 0.85);
+  display: none;
+  animation: fadein 2s ease-out;
+}
+.close-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+button {
+  background-color: wheat;
+  border: 1px solid green;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+input {
+  margin: 10px;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#descriptionTask {
+  animation: task 2s ease-out;
+}
+@keyframes task {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
